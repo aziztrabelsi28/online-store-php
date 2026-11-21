@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fixed: was "ManageElectronics" -->
+    <title>Manage Clients</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">magasin</div>
+        <div class="menu">
+            <a href=""><i class="fa fa-bars menu"></i></a>
+        </div>
+        <ul class="nav-links">
+            <li><a class="active" href="index.php">home</a></li>
+            <li><a href="manageProducts.html">Manage products</a></li>
+            <li><a href="manageClients.html">Manage Clients</a></li>
+            <li><a href="manageCommandes.html">Manage Commandes</a></li>
+            <li><a href="login.html">login</a></li>
+        </ul>
+    </nav>
+
+    <section class="admin-panel">
+        <div class="table-container">
+            <h2>Manage Clients</h2>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>E-mail</th>
+                        <th>Adresse</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fixed: was showing product data (t-shirt etc.) in a clients table -->
+                    <tr>
+                        <td>#001</td>
+                        <td>Dupont</td>
+                        <td>Jean</td>
+                        <td>jean.dupont@email.com</td>
+                        <td>12 Rue de la Paix, Tunis</td>
+                        <td>
+                            <a href="" class="btn">Edit</a>
+                            <a href="" class="btn">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+</html>

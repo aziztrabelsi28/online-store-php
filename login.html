@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-screen">
+        <nav class="navbar">
+            <div class="logo">magasin</div>
+            <div class="menu">
+                <a href=""><i class="fa fa-bars menu"></i></a>
+            </div>
+            <ul class="nav-links">
+                <li><a class="active" href="index.php">home</a></li>
+                <li><a href="more.html">More</a></li>
+                <li><a href="aboutUs.html">about us</a></li>
+                <li><a href="contactUs.html">contact us</a></li>
+                <li><a href="login.html">login</a></li>
+            </ul>
+        </nav>
+        <div class="login-card">
+            <div class="login-text">
+                <h1>login</h1>
+            </div>
+
+            <form action="login_action.php" method="POST">
+
+                <div class="adresse-mail">
+                    <label for="e-mail">e-mail</label>
+                    <!-- Fixed: was user_email, login_action.php expects 'email' -->
+                    <input type="email" id="e-mail" name="email" required>
+                </div>
+
+                <div class="pass">
+                    <label for="password">password</label>
+                    <!-- Fixed: was user_password, login_action.php expects 'password' -->
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="login-register">
+                    <button type="submit" class="btn">login</button>
+                    <a href="register.html" class="btn">register</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,444 @@
+                                     /*home page*/
+
+:root {
+    --font1: "Roboto Condensed", sans-serif;
+    --font2: "Squada One", sans-serif;
+    --color-primaire: #7ebdf7;
+    --color-secondaire: #061421;
+    --color-sombre: #121010;
+    --color-gray: #565454;
+    --color-clair: #fafafa;
+    --transition-link: all 0.6s ease-in;/*commence lentement puis accélère.*/
+    --gap: 10px;
+}
+/* Reset global */
+
+*,
+*::before,
+*::after {
+  margin: 0;       /* Supprime toutes les marges par défaut des éléments */
+  padding: 0;      /* Supprime tous les espacements internes par défaut */
+  box-sizing: border-box; /* Inclut padding et border dans la largeur/hauteur totale */
+}
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),url(img/360_F_232160763_FuTBWDd981tvYEJFXpFZtolm8l4ct0Nz.jpg);
+    min-height: 100vh;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1.3rem 2rem;
+    background:linear-gradient(var(--color-secondaire),var(--color-sombre)) ;
+    color: var(--color-clair);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    z-index: 1000; 
+
+}
+
+
+
+.logo{
+    font-size:2rem;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+
+
+.nav-links{
+    display: flex;
+    gap:var(--gap);
+    list-style: none;
+}
+
+
+.nav-links>li>a{
+    padding: 1px;
+    color: wheat;
+}
+
+
+.menu{                    /* menu hamburger*/
+    display: none;
+}
+
+
+
+/*a{
+    padding: 1px;
+    color: wheat;
+}*/
+
+
+.home{
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),url(img/360_F_232160763_FuTBWDd981tvYEJFXpFZtolm8l4ct0Nz.jpg);
+    color: var(--color-clair);
+    min-height: 100vh;
+    position: relative;
+
+}
+
+
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    min-width: 100%;
+    text-transform: uppercase;
+}
+
+
+
+.choices{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    width: 100%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),url(img/360_F_232160763_FuTBWDd981tvYEJFXpFZtolm8l4ct0Nz.jpg);
+}
+
+
+.card{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+}
+
+
+
+
+.image-box{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+
+.clothes{background-image: url(img/clothes.jpg);}
+.electronics{background-image: url(img/electronics.jpg);}
+.books{background-image: url(img/books.jpg);}
+
+
+.btn{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--color-secondaire);
+    color: white;
+    text-decoration: none;
+    font-family: var(--font2);
+    border-radius: 4px;
+    
+}
+
+
+
+                                       /*Register*/
+
+
+.login-card{
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 30px;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 450px;
+    background: rgba(250, 250, 250, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-clair);
+
+}
+
+
+.login-text{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+.firstname-lastname{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-transform: capitalize;
+}
+
+
+
+/*.first-name{
+    margin: 10px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+
+
+.last-name{
+    margin: 10px;
+    padding: 10px;
+    text-transform: capitalize;
+}*/
+
+
+.login-screen{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    padding-top: 25vh;
+    min-height: 100vh;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),url(img/360_F_232160763_FuTBWDd981tvYEJFXpFZtolm8l4ct0Nz.jpg);
+}
+
+
+.adresse-mail{
+    /*text-align: center;*/
+    margin:10px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+
+.adresse{
+    /*text-align: center;*/
+    margin: 10px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+
+.pass{
+    /*text-align: center;*/
+    text-transform: capitalize;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.login-register{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+input{
+    width: 100%;
+}
+
+
+
+/*                               produits             */
+
+
+
+
+.produit-container {
+    padding-top: 120px; 
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: center;
+    gap: 30px;
+    padding: 120px 20px;
+}
+
+
+.produit-img-box img {
+    width: 100%;      
+    height: 250px;     
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.produit-info {
+    padding: 15px;
+    text-align: center;
+    color: var(--color-clair);
+}
+
+
+.card-produit{
+    flex:0 0 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+}
+
+
+
+                                     /*Admin Dashboard*/
+
+
+.admin-panel{
+    padding-top: 120px;
+    color: var(--color-clair);
+
+
+}
+
+
+
+.add-product-btn {
+    display: block;     
+    width: fit-content;   
+    margin: 40px auto;    
+    text-align: center;
+}   
+
+
+
+.table-container{
+    text-align: center;
+}
+
+
+.admin-table {
+    width: 90%;             
+    margin: 20px auto;      
+    border-collapse: collapse; 
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;       
+}
+
+.admin-table th, 
+.admin-table td {
+    padding: 20px;          
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-table th {
+    background-color: var(--color-secondaire);
+    color: var(--color-primaire);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.add-product-screen{
+    padding-top: 120px; /* Keep your navbar spacing */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    min-height: 100vh;       /* Makes the section full screen height */
+    padding-bottom: 50px;
+}
+
+
+
+
+.add-product-card{
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 30px;
+    border-radius: 20px;
+    width: 30%;
+    max-width: 700px;
+    background: rgba(250, 250, 250, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-clair);
+
+}
+
+
+
+
+
+.add-product-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+
+.add-product-card input {
+    margin-bottom: 15px;
+}
+
+.add-product-card .btn {
+    margin-top: 20px;
+    width: fit-content;
+}
+
+
+
+.category-group{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+
+
+
+
+
+.gender-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.gender-option {
+    flex: 1;
+}
+
+/* Hide the actual radio circle */
+.gender-option input[type="radio"] {
+    display: none;
+}
+
+/* Style the label as a button */
+.gender-option label {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--color-clair);
+    font-size: 0.9rem;
+}
+
+/* Hover effect */
+.gender-option label:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* When the radio is checked, change the button color */
+.gender-option input[type="radio"]:checked + label {
+    background: var(--color-primaire);
+    color: var(--color-secondaire);
+    border-color: var(--color-primaire);
+    font-weight: bold;
+}

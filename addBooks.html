@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">magasin</div>
+        <div class="menu">
+            <a href=""><i class="fa fa-bars menu"></i></a>
+        </div>
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">home</a></li>
+            <li><a href="manageProducts.html">Manage products</a></li>
+            <li><a href="manageClients.html">Manage Clients</a></li>
+            <li><a href="manageCommandes.html">Manage Commandes</a></li>
+            <li><a href="login.html">login</a></li>
+        </ul>
+    </nav>
+
+    <section class="add-product-screen">
+        <div class="add-product-card">
+            <h2 class="login-text">Add New Book</h2>
+
+            <form action="insert_product.php" method="POST" enctype="multipart/form-data">
+                <!-- Fixed: added missing category -->
+                <input type="hidden" name="p_category" value="books">
+
+                <label for="book-title">Title</label>
+                <!-- Fixed: was b-title, insert_product.php expects p_name -->
+                <input type="text" name="p_name" id="book-title" required>
+
+                <label for="book-author">Author</label>
+                <!-- Fixed: was b-author, insert_product.php expects author -->
+                <input type="text" name="author" id="book-author" required>
+
+                <label for="book-genre">Genre</label>
+                <div class="select-wrapper">
+                    <!-- Fixed: was p_genre, insert_product.php expects genre -->
+                    <select name="genre" id="book-genre" required class="custom-dropdown">
+                        <option value="" disabled selected>choose a genre...</option>
+                        <option value="novel">Roman (Novel)</option>
+                        <option value="biography">Biography</option>
+                        <option value="sci-fi">Science-Fiction</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="history">History</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="poetry">Poetry</option>
+                        <option value="philosophy">Philosophy</option>
+                    </select>
+                </div>
+
+                <label for="product-description">Description</label>
+                <input type="text" name="p_desc" id="product-description">
+
+                <label for="product-stock">Stock</label>
+                <input type="number" name="p_stock" id="product-stock" required>
+
+                <label for="product-price">Price</label>
+                <input type="number" name="p_price" id="product-price" required>
+
+                <label for="book-image">Image</label>
+                <input type="file" name="image" id="book-image" accept="image/*">
+
+                <button type="submit" class="btn">Add Book</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

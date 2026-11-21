@@ -1,0 +1,9 @@
+# Uploaded product images (user content)
+uploads/*
+!uploads/.gitkeep
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

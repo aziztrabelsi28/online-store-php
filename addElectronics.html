@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Electronics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">magasin</div>
+        <div class="menu">
+            <a href=""><i class="fa fa-bars menu"></i></a>
+        </div>
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">home</a></li>
+            <li><a href="manageProducts.html">Manage products</a></li>
+            <li><a href="manageClients.html">Manage Clients</a></li>
+            <li><a href="manageCommandes.html">Manage Commandes</a></li>
+            <li><a href="login.html">login</a></li>
+        </ul>
+    </nav>
+
+    <section class="add-product-screen">
+        <div class="add-product-card">
+            <h2 class="login-text">Add New Electronics</h2>
+
+            <form action="insert_product.php" method="POST" enctype="multipart/form-data">
+                <!-- Fixed: added missing category -->
+                <input type="hidden" name="p_category" value="electronics">
+
+                <label for="product-name">Name</label>
+                <input type="text" name="p_name" id="product-name" required>
+
+                <label for="product-description">Description</label>
+                <input type="text" name="p_desc" id="product-description">
+
+                <label for="product-stock">Stock</label>
+                <input type="number" name="p_stock" id="product-stock" required>
+
+                <label for="product-price">Price</label>
+                <input type="number" name="p_price" id="product-price" required>
+
+                <label for="electronics-image">Image</label>
+                <input type="file" name="image" id="electronics-image" accept="image/*">
+
+                <button type="submit" class="btn">Add Electronics</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

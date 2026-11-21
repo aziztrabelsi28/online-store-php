@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Clothes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">magasin</div>
+        <div class="menu">
+            <a href=""><i class="fa fa-bars menu"></i></a>
+        </div>
+        <ul class="nav-links">
+            <li><a class="active" href="index.html">home</a></li>
+            <li><a href="manageProducts.html">Manage products</a></li>
+            <li><a href="manageClients.html">Manage Clients</a></li>
+            <li><a href="manageCommandes.html">Manage Commandes</a></li>
+            <li><a href="login.html">login</a></li>
+        </ul>
+    </nav>
+
+    <section class="add-product-screen">
+        <div class="add-product-card">
+            <h2 class="login-text">Add New Clothes</h2>
+
+            <form action="insert_product.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="p_category" value="clothes">
+
+                <label for="clothes-brand">Brand</label>
+                
+                <input type="text" name="p_name" id="clothes-brand" required>
+
+                <label for="product-description">Description</label>
+                <input type="text" name="p_desc" id="product-description">
+
+                <label for="product-stock">Stock</label>
+                <input type="number" name="p_stock" id="product-stock" required>
+
+                <label for="product-price">Price</label>
+                <input type="number" name="p_price" id="product-price" required>
+
+                <label for="clothes-type">Type</label>
+                <div class="select-wrapper">
+                    
+                    <select name="genre" id="clothes-type" required class="custom-dropdown">
+                        <option value="" disabled selected>choose a type...</option>
+                        <option value="shirt">Shirts</option>
+                        <option value="T-shirt">T-shirts</option>
+                        <option value="sweatshirts">Sweatshirts</option>
+                        <option value="jackets">Jackets</option>
+                        <option value="pants">Pants</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="coats">Coats</option>
+                        <option value="hats">Hats</option>
+                    </select>
+                </div>
+
+                <label for="clothes-size">Size</label>
+                <div class="select-wrapper">
+                    
+                    <select name="size" id="clothes-size" required class="custom-dropdown">
+                        <option value="" disabled selected>choose a size...</option>
+                        <option value="XS">Extra Small (XS)</option>
+                        <option value="S">Small (S)</option>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+                        <option value="XXL">Double Extra Large (XXL)</option>
+                    </select>
+                </div>
+
+                <label>Target Gender</label>
+                <div class="gender-group">
+                    <div class="gender-option">
+                        
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male"><i class="fa fa-mars"></i> Male</label>
+                    </div>
+                    <div class="gender-option">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female"><i class="fa fa-venus"></i> Female</label>
+                    </div>
+                    <div class="gender-option">
+                        <input type="radio" id="unisex" name="gender" value="unisex">
+                        <label for="unisex"><i class="fa fa-transgender"></i> Unisex</label>
+                    </div>
+                </div>
+
+                <label for="clothes-image">Image</label>
+                <input type="file" name="image" id="clothes-image" accept="image/*">
+
+                <button type="submit" class="btn">Add Clothes</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
